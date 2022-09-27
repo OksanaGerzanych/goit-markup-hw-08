@@ -1,0 +1,10 @@
+// header
+.header {
+    background-color: var(--second-btn-bgr);
+    border-bottom: 1px solid var(--border-header);
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    }

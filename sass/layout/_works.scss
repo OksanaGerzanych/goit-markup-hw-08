@@ -1,0 +1,51 @@
+.works {
+    @include section($pt:0)
+   
+}
+
+.works__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+.works__box {
+    position: relative;
+}
+
+.works-name {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+}
+
+.works-name__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 4);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.works__list {
+ display: flex;
+ gap: 30px;
+}
+
+.works__item {
+ flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}

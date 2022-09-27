@@ -1,0 +1,35 @@
+/**
+|============================
+|         Block 1
+|============================
+*/
+:root {
+    /* Fonts */
+--main-font: "Roboto",sans-serif;
+--logo-font: "Raleway",sans-serif;
+
+/* Text colors  */
+--main-text-color: #212121;
+--p-text-color: #757575;
+--black-text-color: #000000;
+--logo-text-color: #2196f3;
+--white-text-color: #ffffff;
+--link-social-color: #AFB1B8;
+
+/* Background colors */
+--main-bgr: #ffffff;
+--main-title-footer-bgr: #2f303a;
+--primary-btn-bgr: #2196f3;
+--second-btn-bgr: #ffffff;
+--active-btn-brg: #188ce8;
+--team-btn-portfolio-bgr: #f5f4fa;
+--section-service-bgr: #C4C4C4;
+
+/*  Border colors */
+--border-header: #ececec;
+--border-portfolio: #eeeeee;
+
+/* Значення для сітки */
+--items: 3;
+--indent: 30px;
+}

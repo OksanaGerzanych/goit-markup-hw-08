@@ -1,0 +1,91 @@
+// _decimal.scss | Ліцензія MIT | gist.github.com/terkel/4373420
+
+// Округлення числа до вказаних цифр.
+//
+// @param {Number} $number Число для округлення
+// @param {Число} [$digits:0] Цифри для виведення
+// @param {String} [$mode:round] (round|ceil|floor) Як округлити число
+// @return {Number} Округлене число
+// @приклад
+//      decimal-round(0,333) => 0
+//      decimal-round(0,333, 1) => 0,3
+//      decimal-round(0,333, 2) => 0,33
+//      decimal-round(0,666) => 1
+//      decimal-round(0,666, 1) => 0,7
+//      decimal-round(0,666, 2) => 0,67
+//
+@function decimal - round ($number , $digits : 0, $mode : round) {
+    $n : 1;
+
+    // $number має бути числом
+    @if type-of ($number ) !=number {
+        @warn ' #{ $number } не є числом. ';
+        @return $number ;
+    }
+
+    // $digits має бути безодиничним числом
+    @if type-of ($digits ) !=число {
+        @warn ' #{ $digits } не є числом. ';
+        @return $number ;
+    }
+
+    @else if not unitless ($digits ) {
+        @warn ' #{ $digits } має одиницю. ';
+        @return $number ;
+    }
+
+    @for $i від 1 до $digits {
+        $n : $n * 10;
+    }
+
+    @if $mode ==round {
+        @return round ($number * $n ) / $n ;
+    }
+
+    @else if $mode ==ceil {
+        @return ceil ($number * $n ) / $n ;
+    }
+
+    @else if $mode ==floor {
+        @return floor ($number * $n ) / $n ;
+    }
+
+    @else {
+        @warn ' #{ $mode } є невизначеним ключовим словом. ';
+        @return $number ;
+    }
+}
+
+// Зведення числа до вказаних цифр.
+//
+// @param {Number} $number Число для округлення
+// @param {Число} [$digits:0] Цифри для виведення
+// @return {Number} Обмежене число
+// @приклад
+//      decimal-ceil(0,333) => 1
+//      decimal-ceil(0,333, 1) => 0,4
+//      decimal-ceil(0,333, 2) => 0,34
+//      decimal-ceil(0,666) => 1
+//      decimal-ceil(0,666, 1) => 0,7
+//      decimal-ceil(0,666, 2) => 0,67
+//
+@function decimal - ceil ($number , $digits : 0) {
+    @return decimal-round ($number , $digits , ceil);
+}
+
+// Довести число до вказаних цифр.
+//
+// @param {Number} $number Число для округлення
+// @param {Число} [$digits:0] Цифри для виведення
+// @return {Number} Поверхове число
+// @приклад
+//      decimal-floor(0,333) => 0
+//      decimal-floor(0,333, 1) => 0,3
+//      decimal-floor(0,333, 2) => 0,33
+//      decimal-floor(0,666) => 0
+//      decimal-floor(0,666, 1) => 0,6
+//      decimal-floor(0,666, 2) => 0,66
+//
+@function decimal - floor ($number , $digits : 0) {
+    @return decimal-round ($number , $digits , floor);
+}
