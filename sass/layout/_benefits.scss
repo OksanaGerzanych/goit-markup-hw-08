@@ -2,14 +2,37 @@
     @include section;
 
     @media screen and (min-width: 1200px) {
-        @include section(94px);
+    @include section($pt: 94px, $pb: 94px);
+    }
+}
+.benefits__list {
+    
+    
+    @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    --items: 2;
+    }
+
+    @media screen and (min-width: 1200px) {
+    --items: 4;
+    }
+} 
+
+.benefits__item {
+
+    @media screen and (min-width: 768px) {
+   
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    }
+
+    @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
     }
 }
 
 .benefits__box {
-
-
-
 
     height: 120px;
     background-color: var(--team-btn-portfolio-bgr);
@@ -23,17 +46,6 @@
 .benefits__icon {
     width: 70px;
     height: 70px;
-
-}
-
-.benefits__list {
-    display: flex;
-    gap: 30px;
-    --items: 4;
-}
-
-.benefits__item {
-    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .benefits__title {

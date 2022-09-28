@@ -1,5 +1,6 @@
 .works {
-    @include section;
+    // desktop-padding
+    @include section ($pt: 0, $pb: 94px);
    
 }
 

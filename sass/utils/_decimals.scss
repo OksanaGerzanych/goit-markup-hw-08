@@ -14,7 +14,7 @@
 //      decimal-round(0,666, 1) => 0,7
 //      decimal-round(0,666, 2) => 0,67
 //
-@function decimal - round ($number , $digits : 0, $mode : round) {
+@function decimal-round ($number , $digits : 0, $mode : round) {
     $n : 1;
 
     // $number має бути числом
@@ -24,7 +24,7 @@
     }
 
     // $digits має бути безодиничним числом
-    @if type-of ($digits ) !=число {
+    @if type-of ($digits ) !=number {
         @warn ' #{ $digits } не є числом. ';
         @return $number ;
     }
@@ -34,7 +34,7 @@
         @return $number ;
     }
 
-    @for $i від 1 до $digits {
+    @for $i from 1 to $digits {
         $n : $n * 10;
     }
 
@@ -69,7 +69,7 @@
 //      decimal-ceil(0,666, 1) => 0,7
 //      decimal-ceil(0,666, 2) => 0,67
 //
-@function decimal - ceil ($number , $digits : 0) {
+@function decimal-ceil ($number , $digits : 0) {
     @return decimal-round ($number , $digits , ceil);
 }
 
@@ -86,6 +86,6 @@
 //      decimal-floor(0,666, 1) => 0,6
 //      decimal-floor(0,666, 2) => 0,66
 //
-@function decimal - floor ($number , $digits : 0) {
+@function decimal-floor ($number , $digits : 0) {
     @return decimal-round ($number , $digits , floor);
 }

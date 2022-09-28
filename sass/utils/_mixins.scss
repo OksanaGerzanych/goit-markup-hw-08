@@ -1,5 +1,5 @@
 
-@mixin section($padding: 30px) {
-    padding-top: $padding;
-    padding-bottom: $padding;
+@mixin section($pt: 30px, $pb: 30px) {
+    padding-top: $pt;
+    padding-bottom: $pb;
 }
