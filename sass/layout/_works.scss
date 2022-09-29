@@ -1,10 +1,16 @@
 .works {
-    // desktop-padding
+   display: none;
+       
+    @media screen and (min-width: 1200px) {
+    display: block;
     @include section ($pt: 0, $pb: 94px);
-   
+   }
 }
 
 .works__title {
+
+    @media screen and (min-width: 1200px) {
+
     margin-bottom: 50px;
 
     font-weight: 700;
@@ -13,20 +19,29 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
+    }
+   
 }
 
 .works__box {
+    @media screen and (min-width: 1200px) {
     position: relative;
+   }
 }
 
 .works-name {
+    @media screen and (min-width: 1200px) {
     position: absolute;
     bottom: 2px;
     left: 0;
     width: 100%;
+    }
+    
 }
 
 .works-name__title {
+
+    @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,13 +55,20 @@
     text-transform: uppercase;
     color: var(--white-text-color);
     background-color: rgba(47, 48, 58, 0.8);
+    }
 }
 
 .works__list {
- display: flex;
- gap: 30px;
+
+   @media screen and (min-width: 1200px) {
+   display: flex;
+   gap: 30px;
+   }
 }
 
 .works__item {
- flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+   @media screen and (min-width: 1200px) {
+   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+   }
 }
