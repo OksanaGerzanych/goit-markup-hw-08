@@ -1,5 +1,6 @@
 .benefits {
-    @include section;
+    
+    @include section ($pt: 60px, $pb: 60px);
 
     @media screen and (min-width: 1200px) {
     @include section($pt: 94px, $pb: 94px);
@@ -21,6 +22,7 @@
 } 
 
 .benefits__item {
+    margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
    
@@ -29,6 +31,7 @@
 
     @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    margin-bottom: 0;
     }
 }
 
