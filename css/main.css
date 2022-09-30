@@ -514,9 +514,21 @@ img {
   background-color: var(--main-title-footer-bgr);
 }
 
+.footer__container {
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
   .footer__container {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -530,6 +542,16 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    text-align: start;
+  }
+}
+
+.footer-social {
+  margin: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-social {
+    margin: 0px;
   }
 }
 
@@ -546,6 +568,16 @@ img {
 .footer-field {
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .footer-field {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-field {
+    margin-top: 0px;
+  }
+}
 
 .footer-field__text {
   font-weight: 700;
@@ -557,14 +589,16 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-field__subscribe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 12px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 1200px) {
+  .footer-field__subscribe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .footer-field__btn {
@@ -577,7 +611,7 @@ img {
 }
 
 .footer-field__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   color: var(--white-text-color);
   background-color: #2F303A;
@@ -586,6 +620,7 @@ img {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 15px 16px;
+  margin-bottom: 20px;
 }
 .footer-field__input::-webkit-input-placeholder {
   font-weight: 400;
@@ -641,6 +676,17 @@ img {
           align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 768px) {
+  .footer-field__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-field__input {
+    width: 358px;
+    margin-bottom: 0;
+  }
 }
 
 .portfolio {
@@ -916,7 +962,12 @@ img {
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .address__link {
