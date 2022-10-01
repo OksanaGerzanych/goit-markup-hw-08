@@ -33,10 +33,12 @@
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
     margin-bottom: 0;
     }
-}
-.benefits__item:last-child {
+
+    &:last-child {
     margin-bottom: 0px;
 }
+}
+
 .benefits__box {
 
     height: 120px;

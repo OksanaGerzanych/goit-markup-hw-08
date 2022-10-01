@@ -1,5 +1,10 @@
 .portfolio {
-    @include section;
+    @include section ($pt: 60px, $pb: 60px);
+
+    @media screen and (min-width: 1200px) {
+        
+    @include section($pt: 94px, $pb: 94px);
+    }
 }
 
 .portfolio__container {
