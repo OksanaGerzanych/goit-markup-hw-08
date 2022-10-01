@@ -31,7 +31,12 @@
 }
 
 .team__social-links {
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+    
+    @media screen and (min-width: 1200px) {
+     padding-bottom: 30px;   
+    }
+    
 }
 
 .footer__social-links-link {

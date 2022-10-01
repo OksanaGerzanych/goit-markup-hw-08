@@ -271,6 +271,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .benefits__item {
+    margin-bottom: 0px;
     -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
         flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   }
@@ -281,6 +282,10 @@ img {
         flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
     margin-bottom: 0;
   }
+}
+
+.benefits__item:last-child {
+  margin-bottom: 0px;
 }
 
 .benefits__box {
@@ -437,7 +442,6 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 30px;
 }
 
 .team__title {
@@ -451,6 +455,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .team__title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.1666666667;
     margin-bottom: 50px;
@@ -1104,7 +1109,12 @@ img {
 }
 
 .team__social-links {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team__social-links {
+    padding-bottom: 30px;
+  }
 }
 
 .footer__social-links-link {
