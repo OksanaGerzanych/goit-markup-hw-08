@@ -1660,6 +1660,12 @@ img {
   color: var(--logo-text-color);
   text-decoration: none;
 }
+@media screen and (max-width: 479px) {
+  .mobile-contact__mail {
+    font-size: 24px;
+    line-height: 1.1666666667;
+  }
+}
 
 .mobile-contact__tel {
   font-weight: 500;
@@ -1675,6 +1681,12 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+}
+@media screen and (max-width: 479px) {
+  .mobile-socials {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .mobile-socials__link {
