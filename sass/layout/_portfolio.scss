@@ -16,10 +16,15 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: space-around;
+
+    @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    }
 }
 .portfolio__item {
 
     @media screen and (min-width: 1200px) {
+    
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
     }
 }
