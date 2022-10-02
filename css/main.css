@@ -791,11 +791,15 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.portfolio__item {
-  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  }
 }
 
 .portfolio__link {
@@ -812,21 +816,31 @@ img {
 }
 
 .portfolio__img {
-  display: block;
-  max-width: 100%;
-  height: auto;
   background: url(portfolio7.jpg);
 }
 
 .portfolio__box {
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 25px;
-  padding-left: 24px;
+  padding: 20px 24px;
   background: var(--main-bgr);
-  border-right: 1px solid var(--border-portfolio);
-  border-bottom: 1px solid var(--border-portfolio);
-  border-left: 1px solid var(--border-portfolio);
+  border: 1px solid var(--border-portfolio);
+  border-top: 0;
+  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__box {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__box {
+    max-width: 370px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__box-first {
+    padding-bottom: 56px;
+  }
 }
 
 .portfolio__titel {
@@ -855,14 +869,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .portfolio-buttons {
     margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -883,6 +899,17 @@ img {
   .portfolio-buttons__list {
     -ms-flex-wrap: none;
         flex-wrap: none;
+  }
+}
+
+.portfolio-buttons__item {
+  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+@media screen and (min-width: 768px) {
+  .portfolio-buttons__item {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 }
 
