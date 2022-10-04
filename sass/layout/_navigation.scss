@@ -48,7 +48,7 @@
     display: inline-block;
 
     position: absolute;
-    bottom: -1px;
+    bottom: -4px;
     left: 0;
 
     width: 100%;
@@ -56,7 +56,9 @@
     background-color: var(--primary-btn-bgr);
     border-radius: 2px;
     }
+    
+    @media screen and (min-width: 1200px) {
 
+    bottom: 4px;
 }
-
-
+}
