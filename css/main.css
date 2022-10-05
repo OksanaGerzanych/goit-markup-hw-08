@@ -1628,7 +1628,6 @@ img {
 }
 
 .mobile-menu__link {
-  position: relative;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
@@ -1668,12 +1667,12 @@ img {
   color: var(--logo-text-color);
 }
 
-.mobile-contact__item:first-child {
-  margin-bottom: 32px;
+.mobile-contact {
+  margin-bottom: 64px;
 }
 
-.mobile-contact__item:last-child {
-  margin-bottom: 64px;
+.mobile-contact__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mobile-contact__tel {
