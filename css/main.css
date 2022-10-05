@@ -1648,8 +1648,8 @@ img {
 
 .mobile-menu__btn-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 15px;
   display: inline-block;
   width: 40px;
   height: 40px;
